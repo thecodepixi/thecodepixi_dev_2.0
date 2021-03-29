@@ -1,0 +1,7 @@
+<nav>
+  <strong>TheCodePixi </strong>
+  {% for item in site.data.nav %}
+      <a href="{{ item.link }}" {% if page.path == item.link or page.collection == item.name %}
+      class="current"{% endif %}>| {{ item.title }} | </a>
+  {% endfor %}
+</nav>
